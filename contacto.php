@@ -55,6 +55,22 @@
                     <input type="submit" value="Enviar mensaje">
                 </form>
             </section>
+
+            <section id="contact-table-container" class="vertical-box center-box">
+                <h2>Tabla de información de contacto</h2>
+
+                <table>
+                    <tr>
+                        <th>Correo electrónico</th>
+                        <td><a href="mailto:<?php echo school_data["correo_electronico"]?>"><?php echo school_data["correo_electronico"]?></a></td>
+                    </tr>
+
+                    <tr>
+                        <th>Número de teléfono</th>
+                        <td><?php echo school_data["telefono"]?></td>
+                    </tr>
+                </table>
+            </section>
             
         </main>
 

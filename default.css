@@ -133,6 +133,7 @@ table {
 }
 
 table td, table th {
+    text-align: center;
     padding: 10px;
     border: 1px solid gray;
 }

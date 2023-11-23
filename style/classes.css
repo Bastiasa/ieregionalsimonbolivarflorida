@@ -85,6 +85,7 @@ p {
 
 * {
     font-family: 'Lato', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: var(--p-font-size);
 }
 
 .center-text {text-align: center;}

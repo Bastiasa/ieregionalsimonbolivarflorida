@@ -8,3 +8,7 @@ form#message-form textarea[name=message-content] {
     height: 150px;
     max-height: 300px;
 }
+
+#contact-table-container {
+    justify-content: center;
+}
