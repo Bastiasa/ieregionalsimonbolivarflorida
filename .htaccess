@@ -1,0 +1,16 @@
+RewriteEngine On
+
+
+#Esconder extensiones .php y .html.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^.]+)$ $1.html [NC,L]
+
+#Redireccionar las peticiones a archivos .php a "php_request_handler.php".
+RewriteCond %{REQUEST_URI} \.php$
+RewriteRule ^(.*)$ php_request_handler.php [L]
+
+#Prohibir acceso a las carpetas.
+Options All -Indexes

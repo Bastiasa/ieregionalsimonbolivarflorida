@@ -1,0 +1,10 @@
+form#message-form > * {
+    margin-bottom: 10px;
+}
+
+form#message-form textarea[name=message-content] {
+    resize: vertical;
+    min-height: 100px;
+    height: 150px;
+    max-height: 300px;
+}

@@ -1,0 +1,16 @@
+{
+    "telefono":"+57 xxx-xxx-xxx-x",
+    "correo_electronico":"regional@simonbolivar.edu.co",
+
+    "consejo_directivo": {
+        "rector":"Pablo Alexander Mosquera",
+
+        "coordinacion":[
+
+        ],
+
+        "secretaria":[
+
+        ]
+    }
+}

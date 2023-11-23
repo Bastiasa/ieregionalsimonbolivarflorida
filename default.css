@@ -1,0 +1,138 @@
+header#top-header {
+    position: relative;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 350px;
+    padding: 0;
+    margin: 0;
+    background-image: url('images/static/backgrounds/title-1.svg');
+    background-size: 25%;
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+#top-header__school-title {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: min(5vw, 50px);
+
+    font-weight: bold;
+
+    width: 100%;
+    padding: 0 5vw;
+
+    box-sizing: border-box;
+    height: fit-content;
+
+    z-index: 100;
+
+    text-align: center;
+}
+
+#top-header__overlay-logo {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 64px;
+    
+    z-index: 100;
+}
+
+#top-header__black-transparent-overlay {
+    position: absolute;
+
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+
+    background-color: black;
+    z-index: 50;
+
+    opacity: 0.7;
+}
+
+#top-header__bg-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+#links-header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: all 200ms ease;
+}
+
+#links-header > a {
+    text-align: center;
+
+    color: black;
+    background-color: transparent;
+
+    --border-style:1px solid var(--second-color);
+
+    border-bottom: var(--border-style);
+    
+    box-sizing: border-box;
+    
+    height: 100%;
+
+    padding: 10px;
+
+    transition: all 222ms ease;
+}
+
+#links-header > a:first-child {border-left: var(--border-style);}
+#links-header > a:last-child {border-right: var(--border-style);}
+
+#links-header > a:hover {
+    color: white;
+    background-color: var(--second-color);
+}
+
+@media (max-width:700px) {
+    #links-header > a {
+        border-right: none;
+        border-left: none;
+    }
+
+    #links-header {
+        flex-direction: column;
+        align-content: stretch;
+    }
+}
+
+main#content {
+    margin-top: 40px !important;
+    padding: 0 20px;
+
+    box-sizing: border-box;
+}
+
+@media (max-width:1100px) {
+    main#content {
+        width: min(100%, 500px);
+        margin: auto;
+    }
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td, table th {
+    padding: 10px;
+    border: 1px solid gray;
+}
