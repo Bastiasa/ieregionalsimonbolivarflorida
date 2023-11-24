@@ -2,7 +2,7 @@ const topHeader = document.querySelector("#top-header");
 const topHeaderBgImage = topHeader.querySelector("img#top-header__bg-image");
 const imagesCount = parseInt(topHeaderBgImage.getAttribute("images"));
 
-var currentImageNumber = 0;
+var currentImageNumber = -1;
 
 const mainLoop = async () => {
     if(topHeaderBgImage instanceof Image) {

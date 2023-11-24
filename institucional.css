@@ -2,6 +2,7 @@
     text-align: center;
 }
 
-#hymn-credits > * {
+#hymn-credits p {
     font-style: italic;
+    color: gray;
 }

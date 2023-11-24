@@ -24,14 +24,11 @@ if(dir_exists(images_folder)):
 
     # Crear los directorios de baja y alta calidad si no existen
 
-    if(dir_exists(low_quality_folder)): shutil.rmtree(low_quality_folder)
+    if(not dir_exists(low_quality_folder)): os.mkdir(low_quality_folder)
     if(not dir_exists(source_quality_folder)):
         os.mkdir(source_quality_folder)
         print("La carpeta de source no estaba creada.")
         exit
-
-    print("Copying source files...")
-    shutil.copytree(source_quality_folder, low_quality_folder)
 
     print("Resizing images files...")
     def quarter_quality(tree_path:str):
@@ -44,14 +41,18 @@ if(dir_exists(images_folder)):
                 quarter_quality(node)
                 continue
             elif(is_image(node)):
-                current_image = Image.open(node)
-                new_image_size = (int(current_image.size[0] * 0.25), int(current_image.size[1] * 0.25))
-                modified = current_image.resize(new_image_size, Image.BILINEAR)
-                os.remove(node)
-                modified.save(node)
-                print(f"Imagen {node} modificada.")
+                if(not os.path.exists(node.replace(source_quality_folder, low_quality_folder))):
+                    current_image = Image.open(node)
+                    new_image_size = (int(current_image.size[0] * 0.25), int(current_image.size[1] * 0.25))
+                    modified = current_image.resize(new_image_size, Image.BILINEAR)
 
-    threading.Thread(target=quarter_quality, args=[low_quality_folder]).run() 
+                    modified.save(node.replace(source_quality_folder, low_quality_folder))
+
+                    print(f"Imagen {node} ha sido modificada.")
+                else:
+                    print(f"La imagen {node} ya fue modificada.")
+
+    threading.Thread(target=quarter_quality, args=[source_quality_folder]).run() 
 else:
     print("Error, la carpeta de imágenes no existe.")
 

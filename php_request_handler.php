@@ -3,8 +3,33 @@
         return sizeof(scandir($path)) - 2;
     }
 
-    define("school_data", json_decode(file_get_contents("data.json"), true));
     define("request_version", "?v=".file_get_contents("version.txt"));
+
+    $school_data =  json_decode(file_get_contents("data.json"), true);
+
+    $formatted_phone_number = $school_data["telefono"];
+
+    $phone_number = substr($formatted_phone_number, 3, strlen($formatted_phone_number));
+    
+    $count = 0;
+    $formatted_phone_number = "";
+
+    foreach (str_split($phone_number) as $char) {
+        
+        if($count >= 3) {
+            $count = 0;
+            $formatted_phone_number .= "-".$char;
+        } else {
+            $formatted_phone_number .= $char;
+        }
+
+        $count++;
+    }
+
+    $formatted_phone_number = "+57 ".$formatted_phone_number;
+    $school_data["telefono_formateado"] = $formatted_phone_number;
+
+    define("school_data", $school_data);
     
     $absolute_path = ($_SERVER["DOCUMENT_ROOT"].$_SERVER["REQUEST_URI"]);
 
@@ -22,10 +47,11 @@
             showForbbiden();
         }
     }  else {
-        if(!str_ends_with($absolute_path, ".php")) $absolute_path .= ".php";
+        
+        if(!str_ends_with($absolute_path, ".php")){$absolute_path .= ".php";}
 
-        if(file_exists($absolute_path)) require $absolute_path;
-        else showForbbiden();
+        if(file_exists($absolute_path)){ require $absolute_path;}
+        else {showForbbiden();}
     }
 
 ?>

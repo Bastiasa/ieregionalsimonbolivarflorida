@@ -83,6 +83,10 @@ p {
     font-weight: normal;
 }
 
+ul {
+    box-sizing: border-box;
+}
+
 * {
     font-family: 'Lato', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: var(--p-font-size);
@@ -250,8 +254,10 @@ p {
     box-sizing: border-box;
     background-color: var(--primary-color);
 
-    margin-top: 27px;
+    margin-top: 50px;
     padding: var(--margin-normal);
+    
+    position: relative;
 }
 
 .default-footer > * {
@@ -282,7 +288,7 @@ img {
     flex-direction: column;
 }
 
-.vertical-box > * {margin-bottom: var(--margin-medium); width: 100%;}
+.vertical-box > * {margin: 0 0 var(--margin-medium) 0; width: 100%;}
 .vertical-box > *:last-child {margin-bottom: 0;}
 
 .horizontal-box {

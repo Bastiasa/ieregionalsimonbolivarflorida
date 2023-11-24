@@ -1,16 +1,44 @@
 {
-    "telefono":"+57 xxx-xxx-xxx-x",
+    "telefono":"+573137047886",
     "correo_electronico":"regional@simonbolivar.edu.co",
 
     "consejo_directivo": {
-        "rector":"Pablo Alexander Mosquera",
+        "rectoria":{
+            "m":[
+                "Pablo Alexander Mosquera"
+            ],
 
-        "coordinacion":[
+            "f":[]
+        },
 
-        ],
+        "coordinacion":{
+            "m":[
+                "Misael Mancilla"
+            ],
 
-        "secretaria":[
+            "f":[
+                "Gloria Patricia Aguilar"
+            ]
+        },
 
-        ]
+        "secretaria": {
+            "f":[
+                "María Cristina Roldán Quintero",
+                "Mónica Lorena Rodrígue Cunda",
+                "Jaqueline Sandoval García"
+            ],
+
+            "m":[]
+        },
+
+        "tecnico_operativo": {
+            "f":["Viviana Angulo Rojas"],
+            "m":[]
+        },
+
+        "psicologia":{
+            "f":["Lida Mondragón Álvarez"],
+            "m":[]
+        }
     }
 }

@@ -11,34 +11,14 @@
 
         <link rel="stylesheet" href="style/classes.css<?php echo request_version?>">
         <link rel="stylesheet" href="default.css<?php echo request_version?>">
-        <link rel="stylesheet" href="instucional.css<?php echo request_version?>">
+        <link rel="stylesheet" href="institucional.css<?php echo request_version?>">
     </head>
 
     <body>
-        
-        <header id="top-header">
-            <span id="top-header__school-title">Institución Educativa Regional Simón Bolívar</span>
-            
-            <img id="top-header__overlay-logo" src="images/static/logo/logo-512x512.webp" alt="Escudo de la Institución Educativa Regional Simón Bolívar">
+        <!-- TOP HEADER DECLARATION -->
+        <?php require "php/templates/top-header.php"?>
 
-            <div id="top-header__black-transparent-overlay"></div>
-
-            <img src="images/source/index/top-header/0.jpg" class="ignore-src" alt="Imagen de la Institución Educativa Regional Simón Bolívar" id="top-header__bg-image" images="<?php echo count_files_in_folder("images/source/index/top-header/")?>">
-            
-            <script src="scripts/index/top-header-activity.js"<?php echo request_version?>></script>
-            
-        </header>
-
-        <div id="links-header" class="children-text-tranform-uppercase children-text-decoration-none">
-            <a href="./">Inicio</a>
-            <a class="disabled">Institucional</a>
-            <a href="gobierno-escolar">Gobierno Escolar</a>
-            <a href="sedes">Sedes</a>
-            <a href="horarios">Horarios</a>
-            <a href="contacto">Contacto</a>
-        </div>
-
-        <main id="content" class="vertical-box fit-width">
+        <main id="content" class="vertical-box center-box">
 
             <section class="vertical-box">
                 <h2>Breve reseña histórica</h2>
@@ -96,8 +76,10 @@
                     <li><b>PERTENENCIA</b> parte importante de la institución y ésta hace parte de mí.</li>
                 </ul>
 
+                <h2>Símbolos de la institución</h2>
+
                 <div id="school-hymn" class="top-normal-padding children-text-align-center">
-                    <h2>Símbolos de la institución</h2>
+                    
                     <h2>HIMNO AL COLEGIO</h2>
                 
                 
@@ -139,20 +121,49 @@
                     <p>Pues formamos personas de honor (bis)</p>
                     
                     <div id="hymn-credits" class="children-text-align-center">
-                        <p>Letra y Música del Licenciado:</p>
-                        <p>JORGE ENRIQUE ESTUPIÑAN</p>
-                        <p>Junio 13 de 1997.</p>
+                        <p>Letra y Música del Licenciado: JORGE ENRIQUE ESTUPIÑAN<br>
+                        Junio 13 de 1997.</p>
                     </div>
                 </div>
+
+                <h2>EL ESCUDO</h2>
+
+                <img style="width: min(100%, 250px);" class="center-box" src="images/source/logo-512x512.webp" alt="Escudo de la Institución Educativa Regional Simón Bolívar">
+
+                <h2>DIVISIÓN DEL ESCUDO:</h2>
+
+                <p>El escudo de la Institución Educativa REGIONAL “SIMÓN BOLÍVAR” está dividido en tres fajas oblicuas:</p>
+
+                <ul class="vertical-box">
+                <li><strong>EL LIBRO:</strong> significa la ciencia, el fin de nuestra vida, páginas en las que deben quedar esculpidas con caracteres imborrables nuestras, BUENAS OBRAS.</li>
+                <li><strong>EL TRACTOR:</strong> es la representación de nuestra especialidad agrícola, ya que buscamos estar acordes con los avances tecnológicos con el objetivo de tener egresados competentes en el campo laboral o preparado para continuar su formación técnica, tecnológica o profesional.</li>
+                <li><strong>EL COMPUTADOR:</strong> a través de la tecnología y el esfuerzo se han ido constituyendo los grandes valores de la humanidad, siendo esto posible a las exigencias del currículo institucional, para llegar a la EXCELENCIA.</li>
+                </ul>
+
+                <p>El escudo tiene como divisa en la parte superior un listón color sable, la expresiva frase: <em>EDUCACIÓN, TECNOLOGÍA Y CULTURA</em>, que son los objetivos del ser de nuestra institución educativa.</p>
+
+                <blockquote>
+                <p>“Al ser humano hay que exigirle lo imposible, para que dé lo posible porque donde hay exigencia hay excelencia, para la integridad del conocimiento del estudiante, enfocado hacía el ser, hacer y saber.”</p>
+                </blockquote>
+
+                <h2>LA BANDERA</h2>
+
+                <img class="center-box" style="width: min(100%, 250px);" src="images/source/flag.png" alt="Bandera de la Institución Educativa Regional Simón Bolívar">
+
+                <p>La bandera de la Institución Educativa Regional “Simón Bolívar” está formada por tres colores:</p>
+
+                <ul class="vertical-box">
+                    <li><strong>LA FRANJA VERDE:</strong> representa la niñez que se educa con esperanza del mañana, representa también el verde de nuestros campos, para los cuales formamos a nuestros estudiantes de manera integral y competente.</li>
+                    <li><strong>LA FRANJA AMARILLA:</strong> representa la riqueza del entorno y el recurso físico y productivo de nuestros ingenios y fincas; la riqueza espiritual y moral de nuestra comunidad educativa.</li>
+                    <li><strong>LA FRANJA ROJA:</strong> representa la fuerza y voluntad con las que nuestra comunidad educativa educa, para lograr individuos íntegros y transformadores de la comunidad en particular y la sociedad.</li>
+                </ul>
+
             </section>
             
         </main>
 
-        <footer class="default-footer" id="underground">
-            <p>Institución Educativa Regional Simón Bolívar &copy;</p>
-            <p>Florida, Valle del Cauca</p>
-            <p>2023</p>
-        </footer>
+        <!-- BOTTOM FOOTER DECLARATION -->
+        <?php require "php/templates/bottom-footer.php"?>
 
         <script type="module" src="scripts/image-loader.js<?php echo request_version?>"></script>
     </body>
